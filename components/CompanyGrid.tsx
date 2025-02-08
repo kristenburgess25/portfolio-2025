@@ -63,18 +63,6 @@ const companies = [
   // Add more projects here
 ];
 
-// const CompanyGrid: React.FC = () => {
-//   return (
-//     <Grid container spacing={4} sx={{ padding: 4 }}>
-//       {companies.map((company, index) => (
-//         <Grid item xs={12} sm={6} md={4} key={index}>
-//           <CompanyCard project={company} />
-//         </Grid>
-//       ))}
-//     </Grid>
-//   );
-// };
-
 const CompanyGrid: React.FC = () => {
   return (
     <Grid container spacing={4} sx={{ padding: 5 }}>

@@ -1,14 +1,55 @@
-import Link from "next/link";
+"use client"; // ✅ Forces client-side execution
+
+import { Link, Box, AppBar, Toolbar, Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
+
+const NavbarContainer = styled(AppBar)(() => ({
+  backgroundColor: "#211332", // ✅ Deep plum color
+  color: "#F5ECFF",
+  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)", // ✅ Subtle shadow for depth
+}));
+
+const NavLinks = styled(Box)(() => ({
+  display: "flex",
+  justifyContent: "flex-end",
+  alignItems: "center",
+  flexGrow: 1,
+  marginRight: "2rem",
+}));
+
+const navItems = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Projects", path: "/projects" },
+];
 
 const NavBar: React.FC = () => {
   return (
-    <nav style={{ backgroundColor: 'black' }}>
-      <div style={{ textAlign: 'right', height: '4rem', margin: 'auto', paddingTop: '1.25rem' }}>
-      <Link style={{ margin: '1rem 2rem' }} href="/">Home</Link>
-      <Link style={{ margin: '1rem 2rem' }} href="/about">About</Link>
-      <Link style={{ margin: '1rem 2rem' }} href="/projects">Projects</Link>
-      </div>
-    </nav>
+    <NavbarContainer position="sticky">
+      <Toolbar>
+        <NavLinks>
+          {navItems.map(({ label, path }) => (
+            <Link
+              key={path}
+              href={path}
+              sx={{
+                color: "#F5ECFF",
+                textDecoration: "none",
+                fontWeight: "500",
+                fontSize: "1rem",
+                marginLeft: "2rem",
+                "&:hover": {
+                  color: "#BFA2DB", // ✅ Soft lilac on hover
+                  transition: "color 0.3s ease-in-out",
+                },
+              }}
+            >
+              <Typography>{label}</Typography>
+            </Link>
+          ))}
+        </NavLinks>
+      </Toolbar>
+    </NavbarContainer>
   );
 };
 

@@ -101,7 +101,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   techStack,
   moreDetails,
   screenshots,
-  backgroundColor,
+  // backgroundColor,
 }) => {
   const [expanded, setExpanded] = useState(false);
 
@@ -110,7 +110,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   };
 
   return (
-    <Card sx={{ maxWidth: 800, margin: "16px auto", borderRadius: 2, boxShadow: 3, backgroundColor }}>
+    <Card sx={{ 
+      maxWidth: 800, 
+      margin: "16px auto", 
+      borderRadius: 2, 
+      boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)", 
+      backgroundColor: "rgba(255, 255, 255, 0.9)" // Slight transparency 
+      }}
+    >
       <Box sx={{ display: "flex", flexDirection: "row", alignItems: "stretch" }}>
         {/* Image Section */}
         <Box sx={{ width: "20%", margin: "1rem", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>

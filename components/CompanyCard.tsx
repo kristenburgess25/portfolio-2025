@@ -134,7 +134,17 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
 
   return (
     <FlipContainer style={{ width: '100%', height: 350 }}>
-      <FlipCardInner flipped={flipped}>
+      <FlipCardInner 
+        flipped={flipped}
+        onClick={handleFlip} // Keep the click-to-flip functionality
+        sx={{
+          cursor: "pointer",
+          transition: "transform 0.3s ease-in-out",
+          "&:hover": {
+            transform: flipped ? "rotateY(180deg)" : "rotateY(10deg)", // 🔥 Subtle tilt to hint at flipping
+          },
+        }}
+      >
         {/* Front Side */}
         <CardSide onClick={handleFlip}>
           <CardMedia
@@ -166,7 +176,9 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
         </CardSide>
 
         {/* Back Side */}
-        <CardSide sx={{ transform: "rotateY(180deg)" }} onClick={handleFlip}>
+        <CardSide 
+          sx={{ transform: "rotateY(180deg)" }} 
+          onClick={handleFlip}>
           <CardContent>
             <Typography gutterBottom variant="h5">
               Key Achievements
