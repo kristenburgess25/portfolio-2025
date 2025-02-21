@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box, Typography, Avatar, Grid, Container } from "@mui/material";
+import { Box, Button, Typography, Avatar, Grid, Container, Link } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 // ✅ Refined Gradient Background (Modern Deep Purple to Soft Lavender)
@@ -86,13 +86,20 @@ const About: React.FC = () => {
           </Typography>
 
           <Typography variant="h5" sx={{ opacity: 0.9, marginTop: "0.5rem", color: "#BFA2DB" }}>
-            a fourth-generation rancher & first-generation software engineer 🤠💻
+            fourth-gen rancher & first-gen software engineer 🤠💻
           </Typography>
 
-          <Typography variant="body1" sx={{ marginTop: "1.5rem", maxWidth: "600px", color: "#f5f5f5" }}>
-            I build <strong>modern, high-performance applications</strong> and bring <strong>creative tech solutions</strong> 
-            to underserved markets, particularly in agriculture.
-            Based in the <strong>Sandhills of Nebraska</strong>, I combine my ranching roots with cutting-edge technology.
+          <Typography variant="body1" sx={{ marginTop: "1.5rem", color: "#f5f5f5" }}>
+          I build modern, high-performance web applications with unique, immersive user experiences. 
+          <br />
+          I also build fences, drive tractors, and train horses. 
+          <br />
+          <br />
+          I am passionate about using technology to solve real-world problems and bring innovation to underserved markets-like agriculture. 
+          <br />
+          <strong>I love working on products that make the world better</strong> - whether that be an app or a cow. 
+          <br />
+          When I&apos;m not at my computer or out in a field, I love exploring new countries and <Link target="_blank" color="#dc93e2" href="https://www.kristenlovescookies.com">trying new recipes.</Link>  
           </Typography>
         </ContentWrapper>
       </HeroSection>
@@ -105,9 +112,10 @@ const About: React.FC = () => {
           </SvgIcon>
           <Typography variant="h6" sx={{ marginTop: 1, color: "#6A0572" }}>Education</Typography>
           <Typography sx={{ color: "#333" }}>
-            I attended a small liberal arts college where I obtained degrees in Political Science and English. My time studying abroad in Europe and Africa were some of the most impactful experiences of my life.
+            I attended a small liberal arts college where I obtained degrees in <strong>Political Science and English.</strong> My time studying abroad in Europe and Africa were some of the most impactful experiences of my life.
             <br />            
-            My passion for the power of coding came from one of my first jobs after college, which led me to Turing School of Software and Design.
+            My passion for the power of coding came from one of my first jobs after college, which led me to 
+            <strong> <Link target="_blank" href="https://turing.edu/" sx={{ textDecoration: "none", color: "black" }}>Turing School of Software and Design.</Link></strong>
           </Typography>
         </IconContent>
 
@@ -117,9 +125,14 @@ const About: React.FC = () => {
           </SvgIcon>
           <Typography variant="h6" sx={{ marginTop: 1, color: "#6A0572" }}>Work</Typography>
           <Typography sx={{ color: "#333" }}>
-            I have worked at multiple startups and agencies, filling roles in sales, marketing, communications, product and project management, design, and engineering.
-            I have a highly diverse skill set and pride myself on my ability to wear many hats to help companies succeed. 
+            I have worked at multiple <strong>startups and agencies</strong>, filling roles in sales, marketing, communications, product and project management, design, and -of course- <strong>engineering</strong>.
+            I have a highly diverse skill set and pride myself on my ability to wear many hats to help companies <strong>succeed</strong>. 
           </Typography>
+          <Link href="/projects">
+            <Button sx={{color: "#6A0572"}}>
+              See My Work
+            </Button>
+          </Link>
         </IconContent>
 
         <IconContent item xs={12} sm={4} md={4} lg={4} xl={4}>
@@ -128,8 +141,7 @@ const About: React.FC = () => {
           </SvgIcon>
           <Typography variant="h6" sx={{ marginTop: 1, color: "#6A0572" }}>Code</Typography>
           <Typography sx={{ color: "#333" }}>
-            I strive to create readable, testable, and maintainable code. While my primary focus is frontend development,
-            I enjoy full-stack development and am skilled in <strong>VueJS, React, and Angular.</strong>
+          I strive to write <strong>readable, testable, and maintainable</strong> code, always considering my future self and fellow developers. <strong>Proficient across the stack</strong>, I am very comfortable managing databases and building APIs. My true passion is in the frontend; I love crafting <strong>rich, performant UX/UI</strong> in any framework, bringing ideas to life with clean, intuitive designs. 
           </Typography>
         </IconContent>
       </AboutIconsContainer>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Typography, Grid, List, ListItem, ListItemIcon, ListItemText, Container } from "@mui/material";
-import { Code, Brush, Storage } from "@mui/icons-material"; 
+import { Code, SettingsSuggest, Storage } from "@mui/icons-material"; 
 import { styled } from "@mui/material/styles";
 
 // ✅ Background Gradient - Light Lilac to Off-White
@@ -25,22 +25,36 @@ const SkillsGrid = styled(Grid)(() => ({
   },
 }));
 
-const SkillCard = styled(Box)(() => ({
-  background: "rgba(255, 255, 255, 0.9)",
-  padding: "2rem",
-  borderRadius: "12px",
-  boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
-  transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
-  "&:hover": {
-    transform: "scale(1.03)",
-    boxShadow: "0px 6px 12px rgba(0,0,0,0.15)",
-  },
-}));
 
 const SkillText = styled(ListItemText)(() => ({
   color: "#6A0572",
   fontWeight: "500",
 }));
+
+
+const frontendSkills = [
+  "JavaScript & TypeScript",
+  "React, Next.js & Vue",
+  "TailwindCSS & Material UI",
+  "State Management (Vuex, Redux)",
+  "Shopify (Liquid, Hydrogen) & BigCommerce"
+];
+
+const backendSkills = [
+  "Node.js (Express, Koa)",
+  "Python (FastAPI, Ariadne)",
+  "Databases (PostgreSQL, Prisma, MongoDB, Redis, oData)",
+  "APIs (REST, GraphQL, Elasticsearch)",
+  "Cloud & DevOps (Docker, Vercel, Netlify, AWS, Heroku, GCP)"
+];
+
+const toolsSkills = [
+  "Testing (Jest, Sinon, Postman)",
+  "Version Control & CI/CD (Git, GitHub Actions)",
+  "Project Management (JIRA, Atlassian)",
+  "Design & Prototyping (Figma, Sketch, Miro)",
+  "E-commerce & Payments (Shopify, BigCommerce, Stripe, Braintree, Sendgrid, MailChimp)"
+];
 
 const SkillsSection: React.FC = () => {
   return (
@@ -50,79 +64,50 @@ const SkillsSection: React.FC = () => {
           Skills & Expertise
         </Typography>
 
-        <SkillsGrid>
+         <SkillsGrid>
           {/* Column 1 */}
-          <SkillCard>
+          <Box>
             <List>
-              <ListItem>
+              {frontendSkills.map((skill, index) => (
+                <ListItem key={index}>
                 <ListItemIcon>
                   <Code sx={{ color: "#6A0572" }} />
                 </ListItemIcon>
-                <SkillText primary="JavaScript (ES6+)" />
+                <SkillText primary={skill} />
               </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <Code sx={{ color: "#6A0572" }} />
-                </ListItemIcon>
-                <SkillText primary="TypeScript" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <Code sx={{ color: "#6A0572" }} />
-                </ListItemIcon>
-                <SkillText primary="React & Next.js" />
-              </ListItem>
+              ))}
             </List>
-          </SkillCard>
+          </Box>
 
           {/* Column 2 */}
-          <SkillCard>
+          <Box>
             <List>
-              <ListItem>
-                <ListItemIcon>
-                  <Brush sx={{ color: "#6A0572" }} />
-                </ListItemIcon>
-                <SkillText primary="UI/UX Design" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <Brush sx={{ color: "#6A0572" }} />
-                </ListItemIcon>
-                <SkillText primary="TailwindCSS & Material UI" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <Brush sx={{ color: "#6A0572" }} />
-                </ListItemIcon>
-                <SkillText primary="Figma & Prototyping" />
-              </ListItem>
+              {backendSkills.map((skill, index) => (
+                  <ListItem key={index}>
+                  <ListItemIcon>
+                    <Storage sx={{ color: "#6A0572" }} />
+                  </ListItemIcon>
+                  <SkillText primary={skill} />
+                </ListItem>
+                ))}
             </List>
-          </SkillCard>
+          </Box>
 
           {/* Column 3 */}
-          <SkillCard>
+          <Box>
             <List>
-              <ListItem>
-                <ListItemIcon>
-                  <Storage sx={{ color: "#6A0572" }} />
-                </ListItemIcon>
-                <SkillText primary="Node.js & Express" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <Storage sx={{ color: "#6A0572" }} />
-                </ListItemIcon>
-                <SkillText primary="PostgreSQL & MySQL" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <Storage sx={{ color: "#6A0572" }} />
-                </ListItemIcon>
-                <SkillText primary="REST & GraphQL APIs" />
-              </ListItem>
+              {toolsSkills.map((skill, index) => (
+                  <ListItem key={index}>
+                  <ListItemIcon>
+                    <SettingsSuggest sx={{ color: "#6A0572" }} />
+                  </ListItemIcon>
+                  <SkillText primary={skill} />
+                </ListItem>
+                ))}
             </List>
-          </SkillCard>
-        </SkillsGrid>
+          </Box>
+        </SkillsGrid> 
+
       </Container>
     </SkillsContainer>
   );

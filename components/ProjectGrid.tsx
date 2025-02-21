@@ -8,7 +8,7 @@ const projects = [
     title: "ShopScene",
     description: "A high-performance platform for managing online stores.",
     image: "../logos/shopscene-logo-nobg.png",
-    liveLink: "https://example.com",
+    liveLink: "https://www.elementumtech.io",
     githubLink: "https://github.com/example",
     techStack: ['React', 'TypeScript', 'Prisma','CraftJS','Material UI', 'Sendgrid','Shopify', 'Shopify Hydrogen', 'Stripe','Vercel','Framer','Google APIs', 'GraphQL', 'NextJS', 'PostCSS', 'TailwindCSS',],
     moreDetails: "The story of the app: This platform includes features like real-time inventory updates, custom analytics dashboards, and multi-currency support.",

@@ -121,12 +121,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <Box sx={{ display: "flex", flexDirection: "row", alignItems: "stretch" }}>
         {/* Image Section */}
         <Box sx={{ width: "20%", margin: "1rem", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>
-          <CardMedia
-            component="img"
-            sx={{ width: "100%", height: "auto", objectFit: "cover", borderRadius: "50%" }}
-            image={image}
-            alt={title}
-          />
+            <CardMedia
+              component="img"
+              sx={{ width: "100%", height: "auto", objectFit: "cover", borderRadius: "50%" }}
+              image={image}
+              alt={title}
+            />
           {/* Icons for Links */}
           <CardActions sx={{ justifyContent: "center", alignItems: "center" }}>
             {liveLink && (
