@@ -21,7 +21,7 @@ const ProjectsPage: React.FC = () => {
         </div> */}
         <div id="client-projects" style={{ backgroundColor: "#312244" }}>
         <Typography variant="h1" sx={{ fontFamily: "'Zain', serif", fontWeight: 700, margin: "auto", textAlign: "center", paddingTop: '3rem' }}>
-            Client Projects
+           Projects
         </Typography>
         <br />
         <ProjectGrid />

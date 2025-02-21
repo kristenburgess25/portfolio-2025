@@ -101,7 +101,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   techStack,
   moreDetails,
   screenshots,
-  // backgroundColor,
+  backgroundColor,
 }) => {
   const [expanded, setExpanded] = useState(false);
 
@@ -111,11 +111,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <Card sx={{ 
-      maxWidth: 800, 
+      maxWidth: 1000, 
       margin: "16px auto", 
       borderRadius: 2, 
       boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)", 
-      backgroundColor: "rgba(255, 255, 255, 0.9)" // Slight transparency 
+      backgroundColor: backgroundColor,
+      // backgroundColor: "rgba(255, 255, 255, 0.9)" // Slight transparency 
       }}
     >
       <Box sx={{ display: "flex", flexDirection: "row", alignItems: "stretch" }}>
@@ -131,7 +132,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <CardActions sx={{ justifyContent: "center", alignItems: "center" }}>
             {liveLink && (
               <IconButton href={liveLink} target="_blank" rel="noopener" aria-label="live site">
-                <Link />
+                <Link/>
               </IconButton>
             )}
             {githubLink && (
@@ -143,7 +144,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </Box>
 
         {/* Main Content Section */}
-        <Box sx={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 2, paddingBottom: 0 }}>
+        <Box sx={{ backgroundColor: "rgba(255, 255, 255, 0.9)", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: 2, paddingBottom: 0 }}>
           <CardContent>
             <Typography variant="h5" component="div" gutterBottom>
               {title}
@@ -151,8 +152,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <Typography variant="body2" color="text.secondary">
               {description}
             </Typography>
-            <Divider />
-
+            <Divider sx={{ margin: "1rem 0"}} />
             <Typography variant="body2" fontWeight="bold">
                 Tech Stack: 
             </Typography>
@@ -172,17 +172,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Expandable Section */}
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
+        <CardContent sx={{ backgroundColor: "rgba(255, 255, 255, 0.9)" }}>
           <Typography paragraph>{moreDetails}</Typography>
           {/* Display Screenshots */}
           <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mt: 2 }}>
-            {screenshots.map((src, index) => (
+            {screenshots?.map((src, index) => (
               <CardMedia
                 key={index}
                 component="img"
                 image={src}
                 alt={`Screenshot ${index + 1}`}
-                sx={{ width: 120, height: 80, objectFit: "cover", borderRadius: 1, boxShadow: 1 }}
+                sx={{ width:"48%", objectFit: "cover", borderRadius: 1, boxShadow: 1 }}
               />
             ))}
           </Box>
