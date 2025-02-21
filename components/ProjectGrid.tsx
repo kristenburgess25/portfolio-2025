@@ -33,7 +33,7 @@ const projects = [
     liveLink: "https://www.elementumtech.io",
     githubLink: "",
     techStack: ['React', 'TypeScript', 'Prisma', 'Material UI', 'Google Cloud Speech', 'Google Cloud Storage', 'Stripe', 'TailwindCSS', 'TipTap', 'Vercel', 'Google APIs', 'Next.js', 'NextAuth', 'oAuth', 'Open AI', 'Novel.sh'],
-    moreDetails: "Built with React, TailwindCSS, and hosted on Vercel.",
+    moreDetails: "A full stack web app for generating custom blog content from social media posts. A user would upload a video via social media link or direct upload. The audio would then be stripped from the video (ffmpeg) and transcribed to text (Google Cloud Speech). The text would then be analyzed with AI, cleaning it up, and improving it. This text would then be populated to a novel.sh editor, where the user could continue to revise the written content for the post with AI or manually, as well as adding additional media and links. When editing is complete, the post is published to a personal feed.",
     screenshots: [],
     backgroundColor: "#A9C33D"
   },
@@ -61,7 +61,7 @@ const projects = [
   },
   {
     title: "Sprinly",
-    description: "A sleek and responsive portfolio showcasing my projects.",
+    description: "Custom Shopify theme updates and custom checkout experience.",
     image: "../logos/sprinly-graphic.webp",
     liveLink: "https://sprinly.com/",
     githubLink: "",
