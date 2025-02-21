@@ -177,11 +177,11 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
 
         {/* Back Side */}
         <CardSide 
-          sx={{ transform: "rotateY(180deg)" }} 
+          sx={{ transform: "rotateY(180deg)", background:`${project.backgroundColor}` }} 
           onClick={handleFlip}>
-          <CardContent>
+          <CardContent sx={{ backgroundColor: "rgba(255, 255, 255, 0.9)" }}>
             <Typography gutterBottom variant="h5">
-              Key Achievements
+              Highlights
             </Typography>
             <List dense>
               {project.keyAchievements.map((item, index) => (
