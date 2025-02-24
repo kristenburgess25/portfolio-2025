@@ -27,7 +27,7 @@ const companies = [
   {
     clientName: "The Taproom Agency",
     logo: "../logos/taproom-agency-logo.png",
-    description: "The Taproom Agency was a leading e-commerce agency specializing in high-performance Shopify solutions for well-known brands. I worked on redesigning and rebuilding Shopify stores for major clients and developed custom Vue applications that seamlessly integrated into Shopify themes—enhancing store functionality with unique, interactive components while maintaining Shopify’s native content management experience.",
+    description: "The Taproom Agency was a leading e-commerce agency specializing in high-performance Shopify solutions for well-known brands. I worked on redesigning and rebuilding Shopify stores for some well-known clients. I also developed custom Vue applications that seamlessly integrated into Shopify themes—enhancing store functionality with unique, interactive components.",
     link: "https://www.thetaproom.com/",
     shopifyPlusPartner: true,
     keyAchievements:['⚡ Developed a custom quiz app for Copper Cow Coffee, allowing customers to receive personalized product recommendations, increasing engagement and conversions.', '⚡ Created an interactive product comparison app, greatly improving the customer shopping experience for Inside Tracker’s complex genetic data product offerings.', '⚡ Created a custom gifting portal for Sprinly, integrating Recharge to enable seamless gifting of recurring meal service subscriptions.'],
@@ -48,7 +48,7 @@ const companies = [
     description: "AGEX is an ag-tech startup building a fully licensed and bonded online livestock auction and marketplace—think eBay for cattle. The company had a unique technical scope, not only developing software solutions for livestock trading but also innovating with custom cattle scales and a QR-based electronic identification (EID) system for tracking livestock.",
     link: "https://www.agex.io",
     shopifyPlusPartner: false,
-    keyAchievements:['⚡ Led frontend development on the marketplace and herd management apps, delivering core functionality for buyers, sellers, and ranchers', '⚡ Implemented end-to-end testing (E2E) across all platforms, improving stability and reliability.', '⚡ Designed all wireframes and prototypes for AGEX’s software suite, ensuring intuitive UX and UI.', 'Played a major role in product development for the herd management app, working closely with stakeholders to define features and workflows'],
+    keyAchievements:['⚡ Led frontend development on the marketplace and herd management apps, delivering core functionality for buyers, sellers, and ranchers', '⚡ Implemented end-to-end testing (E2E) across all platforms, improving stability and reliability.', '⚡ Designed all wireframes and prototypes for AGEX’s software suite, ensuring intuitive UX and UI.', '⚡ Played a major role in product development for the herd management app, working closely with stakeholders to define features and workflows'],
     backgroundColor: "#F5B4D9"
   },
   {
@@ -57,7 +57,7 @@ const companies = [
     description: "GrainBridge was a startup software company specializing in risk management and offer management tools for agricultural businesses. As the first hire, I played a critical role in shaping the company’s growth, wearing multiple hats across sales, marketing, client relations, and content strategy. (GrainBridge was acquired in 2021.)",
     link: "https://app.grainbridge.com/",
     shopifyPlusPartner: false,
-    keyAchievements:['Expanded business into three new states, generating $250K+ in new revenue through strategic partnerships and outreach.', 'Featured speaker at national industry events and forums, positioning GrainBridge as a thought leader in agricultural risk management.', 'Implemented an SEO strategy that increased inbound customer inquiries by 200%.', '⚡ Wrote industry articles featured in national publications, enhancing brand visibility and credibility.', '⚡ Produced promotional and educational video content, helping clients understand and adopt GrainBridge’s technology.'],
+    keyAchievements:['⚡ Expanded business into three new states, generating $250K+ in new revenue through strategic partnerships and outreach.', '⚡ Featured speaker at national industry events and forums, positioning GrainBridge as a thought leader in agricultural risk management.', '⚡ Implemented an SEO strategy that increased inbound customer inquiries by 200%.', '⚡ Wrote industry articles featured in national publications, enhancing brand visibility and credibility.', '⚡ Produced promotional and educational video content, helping clients understand and adopt GrainBridge’s technology.'],
     backgroundColor: "#A9C33D"
   },
   // Add more projects here

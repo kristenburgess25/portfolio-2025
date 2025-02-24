@@ -75,6 +75,7 @@ import {
   Card,
   CardMedia,
   CardContent,
+  Link,
   Typography,
   CardActions,
   Button,
@@ -133,7 +134,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
   };
 
   return (
-    <FlipContainer style={{ width: '100%', height: 350 }}>
+    <FlipContainer style={{ width: '100%', height: 430 }}>
       <FlipCardInner 
         flipped={flipped}
         onClick={handleFlip} // Keep the click-to-flip functionality
@@ -147,29 +148,31 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
       >
         {/* Front Side */}
         <CardSide onClick={handleFlip}>
-          <CardMedia
-            component="img"
-            image={project.logo}
-            alt={project.clientName}
-            sx={{
-              height: 140,
-              objectFit: "contain",
-              padding: "1.5rem",
-              backgroundColor: project.backgroundColor,
-            }}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5">
+          <Link href={project.link} target="_blank" rel="noopener"> 
+            <CardMedia
+              component="img"
+              image={project.logo}
+              alt={project.clientName}
+              sx={{
+                height: 140,
+                objectFit: "contain",
+                padding: "1.5rem",
+                backgroundColor: project.backgroundColor,
+              }}
+            />
+          </Link>
+          <CardContent sx={{ margin: "auto" }}>
+            {/* <Typography gutterBottom variant="h5">
               {project.clientName}
-            </Typography>
+            </Typography> */}
             <Typography variant="body2" color="text.secondary">
               {project.description}
             </Typography>
           </CardContent>
           {project.link && (
-            <CardActions>
-              <Button size="small" href={project.link} target="_blank" rel="noopener">
-                Learn More
+            <CardActions sx={{ margin: "auto 1rem 1rem auto"}}>
+              <Button sx={{ color: "#8282E7" }} size="small">
+                More ⚡
               </Button>
             </CardActions>
           )}
@@ -177,11 +180,19 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
 
         {/* Back Side */}
         <CardSide 
-          sx={{ transform: "rotateY(180deg)", background:`${project.backgroundColor}` }} 
+          sx={{ 
+            transform: "rotateY(180deg)", 
+            background:`${project.backgroundColor}`, 
+            borderTop: `1rem solid ${project.backgroundColor}`
+          }} 
           onClick={handleFlip}>
-          <CardContent sx={{ backgroundColor: "rgba(255, 255, 255, 0.9)" }}>
-            <Typography gutterBottom variant="h5">
-              Highlights
+          <CardContent sx={{ 
+            backgroundColor: "rgba(255, 255, 255, 0.9)",
+            height: "100%"
+            }}
+          >
+            <Typography gutterBottom variant="h5" fontSize="1.15rem">
+              Impact at {project.clientName}
             </Typography>
             <List dense>
               {project.keyAchievements.map((item, index) => (
