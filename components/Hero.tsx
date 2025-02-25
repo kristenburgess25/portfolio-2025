@@ -64,7 +64,18 @@ const Hero = () => {
       <HeroOverlay />
       <HeroContent>
 
-        <Typography variant="h2" sx={{ fontFamily:"'Archivo Black', serif" ,fontWeight: "bold", letterSpacing: "1.25px" }}>
+        <Typography 
+          variant="h2" 
+          sx={{ 
+            fontFamily:"'Archivo Black', serif",
+            fontWeight: "bold", 
+            letterSpacing: "1.25px",
+            "@media (max-width: 768px)": {
+                fontSize: "2.3rem",
+                marginTop: "-3rem"
+              } 
+            }}
+          >
           Kristen Burgess
         </Typography>
 
