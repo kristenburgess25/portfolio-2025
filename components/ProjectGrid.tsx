@@ -103,7 +103,7 @@ const ProjectGrid: React.FC = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md")); 
 
   return (
-    <div id="projects-grid" style={{ marginBottom: "-1rem", paddingBottom: "3rem" }}>
+    <div id="projects-grid" style={{ marginBottom: "-1rem", padding: "0 1.5rem 3rem 1.5rem" }}>
       {projects.map((project, index) => (
         // <ProjectCard key={index} {...project} />
         isMobile ? (

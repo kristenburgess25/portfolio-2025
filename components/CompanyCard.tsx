@@ -116,7 +116,7 @@ const FlipCardInner = styled("div")(({ flipped }: { flipped: boolean }) => ({
   // Make back side scrollable if content overflows
   ".flip-back": {
     overflowY: "auto",
-    scrollbarWidth: "thin", // 🔥 For Firefox
+    scrollbarWidth: "thin", // For Firefox
     scrollbarColor: "rgba(0,0,0,0.2) transparent",
 
     "&::-webkit-scrollbar": {
