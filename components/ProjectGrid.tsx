@@ -21,7 +21,7 @@ const projects = [
     image: "../logos/shopscene-logo-nobg.png",
     liveLink: "https://www.elementumtech.io",
     githubLink: "",
-    techStack: ['React', 'TypeScript', 'Prisma','CraftJS','Material UI', 'Sendgrid','Shopify', 'Shopify Hydrogen', 'Stripe','Vercel','Framer','Google APIs', 'GraphQL', 'NextJS', 'PostCSS', 'TailwindCSS', 'NextAuth', 'oAuth'],
+    techStack: ['React', 'TypeScript', 'Prisma','CraftJS','Material UI', 'Sendgrid','Shopify', 'Shopify Hydrogen','Vite', 'Vercel','Framer','Google APIs', 'GraphQL', 'NextJS', 'PostCSS', 'TailwindCSS', 'NextAuth', 'oAuth'],
     moreDetails: "This platform allows users to create unique online shopping experiences. Essentially, instead of having a gridded page of products to peruse, our users could create interactive rooms to show off products. This could be achieved through arranging 3D product images in a space, or by using an image of a space (for example, an actual showroom or a digital mockup) and creating interactive hotspots. The platform could be linked with Shopify to import all products to create a custom headless Shopify storefront, with its own custom Shopify checkout experience. Users could also link to their Instagram accounts to import social media content and feeds to include in their store experience. With this integration, the platform was also used by content creators who could create a room with links to product partnerships.",
     screenshots: ["/screenshots/shopscene-screen-1.png", "/screenshots/shopscene-screen-2.png", "/screenshots/shopscene-screen-3.png", "/screenshots/shopscene-screen-4.png"],
     backgroundColor: "#f49546"
@@ -96,7 +96,7 @@ const projects = [
 
 const ProjectGrid: React.FC = () => {
   return (
-    <div>
+    <div id="projects-grid" style={{ marginBottom: "-1rem", paddingBottom: "3rem" }}>
       {projects.map((project, index) => (
         <ProjectCard key={index} {...project} />
       ))}

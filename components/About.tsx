@@ -128,11 +128,19 @@ const About: React.FC = () => {
             I have worked at multiple <strong>startups and agencies</strong>, filling roles in sales, marketing, communications, product and project management, design, and -of course- <strong>engineering</strong>.
             I have a highly diverse skill set and pride myself on my ability to wear many hats to help companies <strong>succeed</strong>. 
           </Typography>
-          <Link href="/projects">
-            <Button sx={{color: "#6A0572"}}>
-              See My Work
-            </Button>
-          </Link>
+          <br/>
+          <Box sx={{ display: "flex" }}>
+            <Link href="/projects">
+              <Button sx={{color: "#6A0572"}}>
+                Projects
+              </Button>
+            </Link>
+            <Link href="/projects">
+              <Button sx={{color: "#6A0572"}}>
+                Resume
+              </Button>
+            </Link>
+          </Box>
         </IconContent>
 
         <IconContent item xs={12} sm={4} md={4} lg={4} xl={4}>

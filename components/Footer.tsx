@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Container, IconButton } from "@mui/material";
+import { Link, Box, Typography, Container, IconButton } from "@mui/material";
 import { GitHub, Email, Description } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 
@@ -29,30 +29,30 @@ const Footer: React.FC = () => {
   return (
     <FooterContainer component="footer">
       <Container sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        {/* ✅ Left Side - Copyright */}
+        {/* Left Side - Copyright */}
         <Typography variant="body2">
-          © {new Date().getFullYear()} Kristen Burgess. All rights reserved.
+          © 2025 Kristen Burgess. All rights reserved.
         </Typography>
 
-        {/* ✅ Right Side - Social Icons */}
+        {/* Right Side - Social Icons */}
         <Box>
-          <a href="mailto:your.email@example.com">
+          <Link href="mailto:kb@risten-burgess.dev">
             <StyledIconButton aria-label="Email">
               <Email />
             </StyledIconButton>
-          </a>
+          </Link>
 
-          <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/kristenburgess25" target="_blank" rel="noopener noreferrer">
             <StyledIconButton aria-label="GitHub">
               <GitHub />
             </StyledIconButton>
-          </a>
+          </Link>
 
-          <a href="https://yourresume.com" target="_blank" rel="noopener noreferrer">
+          <Link href="/resume" target="_blank" rel="noopener noreferrer">
             <StyledIconButton aria-label="Resume">
               <Description />
             </StyledIconButton>
-          </a>
+          </Link>
         </Box>
       </Container>
     </FooterContainer>
