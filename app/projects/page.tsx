@@ -30,7 +30,18 @@ const ProjectsPage: React.FC = () => {
           <PersonalProjects />
         </div> */}
         <div id="client-projects" style={{ backgroundColor: "#312244" }}>
-        <Typography variant="h1" sx={{ fontFamily: "'Zain', serif", margin: "auto", textAlign: "center", paddingTop: '3rem' }}>
+        <Typography 
+          variant="h1" 
+          sx={{ 
+            fontFamily: "'Zain', serif", 
+            margin: "auto", 
+            textAlign: "center", 
+            paddingTop: '3rem',
+            "@media (max-width: 768px)": {
+                fontSize: "3.5rem", // Adjust for mobile
+              } 
+          }}
+        >
            Projects
         </Typography>
         <br />
