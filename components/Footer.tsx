@@ -1,7 +1,7 @@
 "use client";
 
 import { Link, Box, Typography, Container, IconButton } from "@mui/material";
-import { GitHub, Email, Description } from "@mui/icons-material";
+import { GitHub, Email, Description, LinkedIn } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 
 const FooterContainer = styled(Box)<{ component?: string }>(() => ({
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
       <Container sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         {/* Left Side - Copyright */}
         <Typography variant="body2">
-          © 2025 Kristen Burgess. All rights reserved.
+          © 2025 Kristen Burgess. <br /> All rights reserved.
         </Typography>
 
         {/* Right Side - Social Icons */}
@@ -40,15 +40,21 @@ const Footer: React.FC = () => {
             </StyledIconButton>
           </Link>
 
+          <Link href="/resume" target="_blank" rel="noopener noreferrer">
+            <StyledIconButton aria-label="Resume">
+              <Description />
+            </StyledIconButton>
+          </Link>
+
           <Link href="https://github.com/kristenburgess25" target="_blank" rel="noopener noreferrer">
             <StyledIconButton aria-label="GitHub">
               <GitHub />
             </StyledIconButton>
           </Link>
 
-          <Link href="/resume" target="_blank" rel="noopener noreferrer">
-            <StyledIconButton aria-label="Resume">
-              <Description />
+          <Link href="www.linkedin.com/in/kristen-burgess-81232279" target="_blank" rel="noopener noreferrer">
+            <StyledIconButton aria-label="LinkedIn">
+              <LinkedIn />
             </StyledIconButton>
           </Link>
         </Box>

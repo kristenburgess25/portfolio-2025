@@ -47,11 +47,16 @@ const ProjectCardDesktop: React.FC<ProjectCardProps> = ({ project }) => {
     <>
       <Card
         sx={{
-          maxWidth: 1000,
-          margin: "16px auto",
-          borderRadius: 2,
-          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-          backgroundColor: project.backgroundColor,
+            maxWidth: 1000,
+            margin: "2rem auto",
+            borderRadius: 2,
+            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+            backgroundColor: project.backgroundColor,
+            transition: "all 0.3s ease-in-out",
+            "&:hover": {
+            transform: "translateX(3px)",
+            boxShadow: `0px 6px 15px ${project.backgroundColor}40`,
+            },
         }}
       >
         <Box 

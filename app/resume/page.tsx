@@ -1,3 +1,5 @@
+import { Typography } from "@mui/material";
+
 const ResumeSection = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column", margin: "3rem auto", alignItems: "center", width: "100%" }}>
@@ -18,12 +20,12 @@ const ResumeSection = () => {
           type="application/pdf"
           style={{ width: "100%", height: "100%" }}
         >
-          <p>
+          <Typography>
             Your browser does not support PDFs. 
             <a href="/kristen-burgess-resume-2025.pdf" target="_blank" rel="noopener noreferrer">
               Click here to view the resume.
             </a>
-          </p>
+          </Typography>
         </object>
       </div>
 

@@ -10,7 +10,7 @@ const ProjectsPage: React.FC = () => {
       <div id="employment-history">
         <div id="client-projects" style={{ background: "linear-gradient(to bottom, #BFA2DB, #312244)" }}>
         <Typography 
-          variant="h1" 
+          variant="h2" 
           sx={{ 
             fontFamily: "'Zain', serif", 
             margin: "auto", 
@@ -31,7 +31,7 @@ const ProjectsPage: React.FC = () => {
         </div> */}
         <div id="client-projects" style={{ backgroundColor: "#312244" }}>
         <Typography 
-          variant="h1" 
+          variant="h2" 
           sx={{ 
             fontFamily: "'Zain', serif", 
             margin: "auto", 
