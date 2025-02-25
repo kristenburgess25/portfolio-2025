@@ -79,11 +79,35 @@ const About: React.FC = () => {
         <ContentWrapper>
           <StyledAvatar src="https://i.imgur.com/io5PKEg.jpg?1" alt="Kristen Burgess" />
 
-          <Typography variant="h4" sx={{ fontFamily:"'Archivo Black', serif", fontWeight: "bold", letterSpacing: "1px", color: "#fff" }}>
+          <Typography 
+            variant="h4" 
+            sx={{ 
+              fontFamily:"'Archivo Black', serif", 
+              fontWeight: "bold", 
+              letterSpacing: "1px", 
+              color: "#fff", 
+              fontSize: "2.5rem", // Default for desktop
+              "@media (max-width: 768px)": {
+                fontSize: "1.7rem", // Adjust for mobile
+              }
+            }}
+          >
             Howdy, I&apos;m Kristen! 
           </Typography>
 
-          <Typography variant="h4" sx={{ fontFamily:"'Zain', serif", opacity: 0.9, marginTop: "0.5rem", color: "#BFA2DB" }}>
+          <Typography 
+            variant="h4" 
+            sx={{ 
+              fontFamily:"'Zain', serif", 
+              opacity: 0.9, 
+              marginTop: "0.5rem", 
+              color: "#BFA2DB", 
+              fontSize: "2rem", 
+              "@media (max-width: 768px)": {
+                fontSize: "1.7rem", 
+              }
+            }}
+          >
             fourth-gen rancher & first-gen software engineer 🤠💻
           </Typography>
 

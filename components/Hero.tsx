@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Typography, Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-// Parallax Hero Section with Lightened Overlay
+// Parallax Hero Section with Mobile Fix
 const HeroContainer = styled(Box)(() => ({
   width: "100%",
   height: "100vh", // Full-screen hero section
@@ -15,9 +15,13 @@ const HeroContainer = styled(Box)(() => ({
   color: "white",
   background: "linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('https://i.imgur.com/XizsJ1c.jpg')",
   backgroundSize: "cover",
-  backgroundAttachment: "fixed", // Enables Parallax Effect
   backgroundPosition: "center",
-  position: "relative",
+  backgroundAttachment: "fixed", // Enables Parallax Effect
+  
+  // Disable parallax effect on mobile (iOS Safari fix)
+  "@media (max-width: 768px)": {
+    backgroundAttachment: "scroll",
+  },
 }));
 
 const HeroOverlay = styled(Box)(() => ({
@@ -38,13 +42,6 @@ const HeroContent = styled(Container)(() => ({
   gap: "1rem",
   padding: "1rem",
 }));
-
-// const HeroAvatar = styled(Avatar)(() => ({
-//   width: 160,
-//   height: 160,
-//   border: "3px solid white", 
-//   marginBottom: "1rem",
-// }));
 
 // const HeroButton = styled(Button)(() => ({
 //   marginTop: "1rem",
@@ -75,13 +72,6 @@ const Hero = () => {
           Cowgirl / Software Engineer / Baker / Conservationist / Conversationalist 
         </Typography>
 
-        {/* <Typography variant="body1" sx={{ maxWidth: "600px", opacity: 0.85 }}>
-          I build high-performance applications and bring modern tech solutions to agriculture.
-        </Typography> */}
-
-        {/* <HeroButton variant="outlined" href="#about">
-          More!
-        </HeroButton> */}
       </HeroContent>
     </HeroContainer>
   );
