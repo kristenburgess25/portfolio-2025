@@ -29,3 +29,11 @@ body {
 .backface-hidden {
   backface-visibility: hidden;
 }
+
+h1 {
+  font-family: 'Zain', serif;
+  margin: auto;
+  text-align: center;
+  padding-top: 3rem;
+  font-weight: 700;
+}

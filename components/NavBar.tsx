@@ -46,7 +46,7 @@ const NavBar: React.FC = () => {
                 },
               }}
             >
-              <Typography>{label}</Typography>
+              <Typography sx={{ fontFamily: "'Zain', serif", fontSize: "1.25rem" }}>{label}</Typography>
             </Link>
           ))}
         </NavLinks>

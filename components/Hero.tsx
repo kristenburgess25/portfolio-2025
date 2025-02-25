@@ -1,59 +1,10 @@
-// "use client";
-
-// import React from "react";
-// import { Box, Typography } from "@mui/material";
-// import { styled } from "@mui/material/styles";
-
-// // Styled component for hero section
-// const HeroContainer = styled(Box)(() => ({
-//   marginTop: "40px",
-//   display: "flex",
-//   justifyContent: "center",
-//   overflow: "hidden",
-//   width: "100%",
-//   height: "100vh",
-//   position: "relative",
-//   textAlign: "center",
-//   background: "url('https://i.imgur.com/XizsJ1c.jpg') no-repeat center center fixed",
-//   backgroundSize: "cover",
-//   "@media (max-width: 500px)": {
-//     background: "url('https://i.imgur.com/XizsJ1c.jpg') no-repeat center center scroll",
-//     backgroundSize: "cover",
-//   },
-// }));
-
-// const BannerText = styled(Typography)(() => ({
-//   position: "absolute",
-//   color: "#231b4e",
-//   top: "8%",
-//   left: "50%",
-//   transform: "translate(-50%, -50%)",
-//   fontFamily: "'Roboto Slab', serif",
-//   fontWeight: "700",
-//   fontSize: "3rem",
-//   margin: "1rem 0 0rem",
-//   textAlign: "center",
-//   letterSpacing: "3px",
-// }));
-
-// const Hero: React.FC = () => {
-//   return (
-//     <HeroContainer>
-//       <BannerText variant="h2">Kristen Burgess</BannerText>
-//     </HeroContainer>
-//   );
-// };
-
-// export default Hero;
-
-
 "use client";
 
 import React from "react";
 import { Box, Typography, Button, Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-// ✅ Parallax Hero Section with Lightened Overlay
+// Parallax Hero Section with Lightened Overlay
 const HeroContainer = styled(Box)(() => ({
   width: "100%",
   height: "100vh", // Full-screen hero section
@@ -73,7 +24,7 @@ const HeroOverlay = styled(Box)(() => ({
   position: "absolute",
   width: "100%",
   height: "100%",
-  background: "rgba(0, 0, 0, 0.2)", // ✅ Lightened overlay for better visibility
+  background: "rgba(0, 0, 0, 0.2)", // Lightened overlay for better visibility
   zIndex: 1,
 }));
 
@@ -91,7 +42,7 @@ const HeroContent = styled(Container)(() => ({
 // const HeroAvatar = styled(Avatar)(() => ({
 //   width: 160,
 //   height: 160,
-//   border: "3px solid white", // ✅ Slightly thinner border for a sleek look
+//   border: "3px solid white", 
 //   marginBottom: "1rem",
 // }));
 
@@ -116,12 +67,11 @@ const Hero = () => {
       <HeroOverlay />
       <HeroContent>
 
-        {/* ✅ Modernized Typography */}
-        <Typography variant="h2" sx={{ fontWeight: "bold", letterSpacing: "1px" }}>
+        <Typography variant="h2" sx={{ fontFamily:"'Archivo Black', serif" ,fontWeight: "bold", letterSpacing: "1.25px" }}>
           Kristen Burgess
         </Typography>
 
-        <Typography variant="h5" sx={{ opacity: 0.9 }}>
+        <Typography variant="h5" sx={{ opacity: 0.9, fontFamily:"'Zain', serif" }}>
           Cowgirl / Software Engineer / Baker / Conservationist / Conversationalist 
         </Typography>
 
@@ -129,10 +79,9 @@ const Hero = () => {
           I build high-performance applications and bring modern tech solutions to agriculture.
         </Typography> */}
 
-        {/* ✅ Changed CTA Button to Outlined */}
-        <HeroButton variant="outlined" href="#about">
+        {/* <HeroButton variant="outlined" href="#about">
           More!
-        </HeroButton>
+        </HeroButton> */}
       </HeroContent>
     </HeroContainer>
   );

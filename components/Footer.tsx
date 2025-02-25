@@ -4,10 +4,9 @@ import { Link, Box, Typography, Container, IconButton } from "@mui/material";
 import { GitHub, Email, Description } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 
-// ✅ Explicitly Declare Component Type in Styled Box
 const FooterContainer = styled(Box)<{ component?: string }>(() => ({
-  backgroundColor: "#211332", // ✅ Matches Navbar
-  color: "#F5ECFF", // ✅ Light text for contrast
+  backgroundColor: "#211332", // Matches Navbar
+  color: "#F5ECFF", 
   padding: "1rem 0",
   display: "flex",
   justifyContent: "space-between",
@@ -16,12 +15,11 @@ const FooterContainer = styled(Box)<{ component?: string }>(() => ({
   fontSize: "0.9rem",
 }));
 
-// ✅ Styled IconButton with Hover Effect
 const StyledIconButton = styled(IconButton)(() => ({
   color: "#F5ECFF",
   transition: "color 0.3s ease-in-out",
   "&:hover": {
-    color: "#BFA2DB", // ✅ Soft lilac on hover
+    color: "#BFA2DB",
   },
 }));
 

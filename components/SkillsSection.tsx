@@ -5,7 +5,6 @@ import { Box, Typography, Grid, List, ListItem, ListItemIcon, ListItemText, Cont
 import { Code, SettingsSuggest, Storage } from "@mui/icons-material"; 
 import { styled } from "@mui/material/styles";
 
-// ✅ Background Gradient - Light Lilac to Off-White
 const SkillsContainer = styled(Box)(() => ({
   textAlign: "center",
   background: "linear-gradient(180deg, #BFA2DB, #F5ECFF)", 
@@ -17,11 +16,11 @@ const SkillsContainer = styled(Box)(() => ({
 const SkillsGrid = styled(Grid)(() => ({
   maxWidth: "1100px",
   margin: "0 auto",
-  display: "grid",  // ✅ Forces strict grid layout
-  gridTemplateColumns: "repeat(3, 1fr)",  // ✅ 3 equal columns
-  gap: "1.5rem",  // ✅ Ensures equal spacing
+  display: "grid", 
+  gridTemplateColumns: "repeat(3, 1fr)",  // 3 equal columns
+  gap: "1.5rem", 
   "@media (max-width: 900px)": {
-    gridTemplateColumns: "1fr", // ✅ Stacks items on mobile
+    gridTemplateColumns: "1fr", 
   },
 }));
 
@@ -60,7 +59,7 @@ const SkillsSection: React.FC = () => {
   return (
     <SkillsContainer>
       <Container>
-        <Typography variant="h3" sx={{ fontWeight: "bold", color: "#6A0572", marginBottom: "2rem" }}>
+        <Typography variant="h3" sx={{ fontFamily:"'Zain', serif", fontWeight: "bold", color: "#6A0572", marginBottom: "2rem" }}>
           Skills & Expertise
         </Typography>
 

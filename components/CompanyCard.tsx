@@ -171,7 +171,7 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
           </CardContent>
           {project.link && (
             <CardActions sx={{ margin: "auto 1rem 1rem auto"}}>
-              <Button sx={{ color: "#8282E7" }} size="small">
+              <Button sx={{ color: "#8282E7", fontFamily:"'Zain', serif", fontSize: "1rem" }} size="small">
                 More ⚡
               </Button>
             </CardActions>
