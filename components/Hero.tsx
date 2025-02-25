@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box, Typography, Button, Container } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 // Parallax Hero Section with Lightened Overlay
@@ -46,20 +46,20 @@ const HeroContent = styled(Container)(() => ({
 //   marginBottom: "1rem",
 // }));
 
-const HeroButton = styled(Button)(() => ({
-  marginTop: "1rem",
-  padding: "12px 24px",
-  fontSize: "1rem",
-  fontWeight: "bold",
-  borderRadius: "8px",
-  textTransform: "none",
-  color: "white",
-  borderColor: "white",
-  transition: "all 0.3s ease-in-out",
-  "&:hover": {
-    boxShadow: "0px 0px 10px rgba(0,0,255,0.4)",
-  }
-}));
+// const HeroButton = styled(Button)(() => ({
+//   marginTop: "1rem",
+//   padding: "12px 24px",
+//   fontSize: "1rem",
+//   fontWeight: "bold",
+//   borderRadius: "8px",
+//   textTransform: "none",
+//   color: "white",
+//   borderColor: "white",
+//   transition: "all 0.3s ease-in-out",
+//   "&:hover": {
+//     boxShadow: "0px 0px 10px rgba(0,0,255,0.4)",
+//   }
+// }));
 
 const Hero = () => {
   return (

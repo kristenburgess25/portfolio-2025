@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Project } from "../types/project";
+import Image from "next/image";
 
 interface FlipCardProps {
   project: Project;
@@ -22,7 +23,7 @@ const FlipCard: React.FC<FlipCardProps> = ({ project }) => {
       >
         {/* Front Side */}
         <div className="absolute inset-0 bg-white rounded-lg shadow-lg flex items-center justify-center backface-hidden">
-          <img
+          <Image
             src={project.logo}
             alt={project.clientName}
             className="max-h-24"
