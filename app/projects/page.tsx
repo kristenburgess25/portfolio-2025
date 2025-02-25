@@ -9,7 +9,19 @@ const ProjectsPage: React.FC = () => {
     return (
       <div id="employment-history">
         <div id="client-projects" style={{ background: "linear-gradient(to bottom, #BFA2DB, #312244)" }}>
-        <Typography variant="h1" sx={{ fontFamily: "'Zain', serif", margin: "auto", textAlign: "center", paddingTop: '3rem' }}>
+        <Typography 
+          variant="h1" 
+          sx={{ 
+            fontFamily: "'Zain', serif", 
+            margin: "auto", 
+            textAlign: "center", 
+            paddingTop: '3rem', 
+            color: "white",
+            "@media (max-width: 768px)": {
+                fontSize: "3.5rem", // Adjust for mobile
+              }
+            }}
+          >
             Work Experience
         </Typography>
         <CompanyGrid />

@@ -101,29 +101,53 @@ interface CompanyCardProps {
 const FlipContainer = styled("div")(() => ({
   perspective: "1000px",
   width: "100%",
-  height: "100%",
+  height: "430px", // Default height
   position: "relative",
-  margin: "20px", // Add margin to ensure space around each card
 }));
 
 
-// Styling for the flipping mechanism
 const FlipCardInner = styled("div")(({ flipped }: { flipped: boolean }) => ({
   width: "100%",
-  height: "100%",
+  height: "auto",
   transformStyle: "preserve-3d",
   transition: "transform 0.6s ease-in-out",
   transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+
+  // ✅ Make back side scrollable if content overflows
+  ".flip-back": {
+    overflowY: "auto",
+    scrollbarWidth: "thin", // 🔥 For Firefox
+    scrollbarColor: "rgba(0,0,0,0.2) transparent",
+
+    "&::-webkit-scrollbar": {
+      width: "6px", // ✅ Thin scrollbar (Chrome, Safari)
+    },
+    "&::-webkit-scrollbar-thumb": {
+      background: "rgba(0,0,0,0.3)", // ✅ Subtle styling
+      borderRadius: "4px",
+    },
+  },
+
+  // ✅ Apply hover effect only on desktop
+  "@media (min-width: 768px)": {
+    cursor: "pointer",
+    transition: "transform 0.3s ease-in-out",
+    "&:hover": {
+      transform: flipped ? "rotateY(180deg)" : "rotateY(10deg)",
+    },
+  }
 }));
 
-// Styling for card sides
 const CardSide = styled(Card)(() => ({
   position: "absolute",
   width: "100%",
-  height: "100%",
+  height: "430px", // Default height
+  minHeight: "430px", // Ensures consistency
+
   backfaceVisibility: "hidden",
   display: "flex",
   flexDirection: "column",
+
 }));
 
 const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
@@ -138,13 +162,6 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
       <FlipCardInner 
         flipped={flipped}
         onClick={handleFlip} // Keep the click-to-flip functionality
-        sx={{
-          cursor: "pointer",
-          transition: "transform 0.3s ease-in-out",
-          "&:hover": {
-            transform: flipped ? "rotateY(180deg)" : "rotateY(10deg)", // 🔥 Subtle tilt to hint at flipping
-          },
-        }}
       >
         {/* Front Side */}
         <CardSide onClick={handleFlip}>
@@ -162,9 +179,6 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
             />
           </Link>
           <CardContent sx={{ margin: "auto" }}>
-            {/* <Typography gutterBottom variant="h5">
-              {project.clientName}
-            </Typography> */}
             <Typography variant="body2" color="text.secondary">
               {project.description}
             </Typography>
@@ -179,35 +193,41 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
         </CardSide>
 
         {/* Back Side */}
-        <CardSide 
-          sx={{ 
-            transform: "rotateY(180deg)", 
-            background:`${project.backgroundColor}`, 
-            borderTop: `1rem solid ${project.backgroundColor}`
-          }} 
-          onClick={handleFlip}>
-          <CardContent sx={{ 
-            backgroundColor: "rgba(255, 255, 255, 0.9)",
-            height: "100%"
-            }}
-          >
-            <Typography gutterBottom variant="h5" fontSize="1.15rem">
-              Impact at {project.clientName}
-            </Typography>
-            <List dense>
-              {project.keyAchievements.map((item, index) => (
-                <ListItem key={index}>
-                  <Typography variant="body2">{item}</Typography>
-                </ListItem>
-              ))}
-            </List>
-          </CardContent>
-        </CardSide>
+{/* Back Side */}
+<CardSide 
+  className="flip-back" // ✅ Apply scrollable class
+  sx={{ 
+    transform: "rotateY(180deg)", 
+    background: `${project.backgroundColor}`, 
+    borderTop: `1rem solid ${project.backgroundColor}`,
+  }} 
+  onClick={handleFlip}
+>
+  <CardContent
+    sx={{ 
+      backgroundColor: "rgba(255, 255, 255, 0.9)",
+      height: "100%", 
+    }}
+  >
+    <Typography gutterBottom variant="h5" fontSize="1.15rem">
+      Impact at {project.clientName}
+    </Typography>
+    <List dense>
+      {project.keyAchievements.map((item, index) => (
+        <ListItem key={index}>
+          <Typography variant="body2">{item}</Typography>
+        </ListItem>
+      ))}
+    </List>
+  </CardContent>
+</CardSide>
+
       </FlipCardInner>
     </FlipContainer>
   );
 };
 
 export default CompanyCard;
+
 
 

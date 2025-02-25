@@ -65,9 +65,15 @@ const companies = [
 
 const CompanyGrid: React.FC = () => {
   return (
-    <Grid container spacing={4} sx={{ padding: 5 }}>
+    <Grid 
+      container 
+      spacing={4} 
+      justifyContent="center"
+      alignItems="center" 
+      sx={{ padding: 5 }}
+    >
       {companies.map((company, index) => (
-        <Grid item xs={12} sm={6} md={4} key={index}>
+        <Grid item xs={12} sm={12} md={6} lg={4} key={index} display="flex" justifyContent="center">
           <CompanyCard project={company} />
         </Grid>
       ))}
