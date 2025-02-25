@@ -1,7 +1,11 @@
 "use client";
 
 import React from "react";
-import ProjectCard from "./ProjectCard";
+import { useMediaQuery, useTheme } from "@mui/material";
+// import ProjectCard from "./ProjectCard";
+import ProjectCardDesktop from "./ProjectCardDesktop";
+import ProjectCardMobile from "./ProjectCardMobile";
+
 
 const projects = [
   {
@@ -95,10 +99,18 @@ const projects = [
 ];
 
 const ProjectGrid: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md")); 
+
   return (
     <div id="projects-grid" style={{ marginBottom: "-1rem", paddingBottom: "3rem" }}>
       {projects.map((project, index) => (
-        <ProjectCard key={index} {...project} />
+        // <ProjectCard key={index} {...project} />
+        isMobile ? (
+          <ProjectCardMobile key={index} project={project} /> 
+        ) : (
+          <ProjectCardDesktop key={index} project={project} />
+        )
       ))}
     </div>
   );
