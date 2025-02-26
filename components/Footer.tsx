@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
 
         {/* Right Side - Social Icons */}
         <Box>
-          <Link href="mailto:kb@risten-burgess.dev">
+          <Link href="mailto:kb@kristen-burgess.dev">
             <StyledIconButton aria-label="Email">
               <Email />
             </StyledIconButton>
