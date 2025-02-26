@@ -15,7 +15,7 @@ const projects = [
     liveLink: "https://www.kristenlovescookies.com",
     githubLink: "https://github.com/kristenburgess25/kristen-loves-cookies",
     techStack: ['React', 'TypeScript', 'Next.js', 'PostgreSQL', 'Python', 'FastAPI', 'SQLAlchemy', 'GraphQL', 'TailwindCSS', 'Material UI', 'Vercel', 'Google Cloud Run', 'Google Cloud SQL'],
-    moreDetails: "I don't know if you've been on any baking blogs to grab a recipe lately, but it's kind of an exhausting and ad-free mess. I wanted a beautiful place to share my favorite recipes- and I wanted a fun an approachable project for building my first Python/FastAPI backend.",
+    moreDetails: "I don't know if you've been on any baking blogs to grab a recipe lately, but it's kind of an exhausting and ad-full mess. I wanted a beautiful place to share my favorite recipes- and I wanted a fun an approachable project for building my first Python/FastAPI backend.",
     screenshots: ["/screenshots/klc-1.png", "/screenshots/klc-2.png"],
     backgroundColor: "#99D0F7"
   },
