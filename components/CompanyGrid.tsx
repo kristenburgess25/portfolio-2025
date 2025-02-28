@@ -36,7 +36,7 @@ const companies = [
   {
     clientName: "DevIQ",
     logo: "../logos/deviq-2.png",
-    description: "Formerly Hatton Point, DevIQ was a software consultancy specializing in highly complex, data-driven applications for large-scale clients across multiple industries, including automotive, entertainment, medical, and education. I worked on challenging full-stack projects, collaborating closely with clients from initial sales discussions through production deployment.",
+    description: "Formerly Hatton Point, DevIQ is a software consultancy specializing in highly complex, data-driven applications for large-scale clients across multiple industries, including automotive, entertainment, medical, and education. I worked on challenging full-stack projects, collaborating closely with clients from initial sales discussions through production deployment.",
     link: "https://www.deviq.io",
     shopifyPlusPartner: false,
     keyAchievements:['⚡ Helped secure $450K+ in new business as part of a three-person sales development team, driving client acquisition through technical expertise and project scoping.', '⚡ Led three greenfield projects from the sales phase through production release, working closely with stakeholders to design and implement scalable solutions.', '⚡ Designed and built a real-time live chat application for an automotive software company, improving communication and workflow efficiency for service centers.', '⚡ Developed a high-performance data visualization tool that enabled clients to manage and analyze millions of rows of data, optimizing decision-making processes for large-scale operations.'],
