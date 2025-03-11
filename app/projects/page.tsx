@@ -42,7 +42,7 @@ const ProjectsPage: React.FC = () => {
               } 
           }}
         >
-           Projects
+           Featured Projects
         </Typography>
         <br />
         <ProjectGrid />
