@@ -9,5 +9,6 @@ export interface Project {
     screenshots: string[];
     backgroundColor: string;
     tags: string[];
+    subtags: string[];
     // logo: string;
   }
