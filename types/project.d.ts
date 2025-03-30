@@ -1,7 +1,8 @@
 export interface Project {
   title: string;
   description: string;            
-  moreDetails: string;            
+  moreDetails: string;
+  logo: string;            
   image: string;                 
   screenshots: string[];         
   liveLink: string;               
