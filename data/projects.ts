@@ -12,7 +12,10 @@ export const projects: Project[] = [
     screenshots: ["/screenshots/klc-1.png", "/screenshots/klc-2.png"],
     backgroundColor: "#99D0F7",
     tags:['backend', 'frontend', 'fullstack', 'design', 'personal'],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2025",
+    id: "kristen-loves-cookies",
   },
   {
     title: "ShopScene",
@@ -25,7 +28,10 @@ export const projects: Project[] = [
     screenshots: ["/screenshots/shopscene-screen-1.png", "/screenshots/shopscene-screen-2.png", "/screenshots/shopscene-screen-3.png", "/screenshots/shopscene-screen-4.png"],
     backgroundColor: "#f49546",
     tags:['backend', 'frontend', 'fullstack', 'design', 'shopify', 'app', 'pro', 'ecomm'],
-    subtags: ['headless', 'custom-cart', 'shopify-api', 'shopify-hydrogen']
+    subtags: ['headless', 'custom-cart', 'shopify-api', 'shopify-hydrogen'],
+    featured: false,
+    year: "2022-2024",
+    id: "shop-scene",
   },
   {
     title: "Locket",
@@ -38,7 +44,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#A9C33D",
     tags:['backend', 'frontend', 'fullstack', 'googlecloud', 'app', 'pro'],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2024",
+    id: "locket",
   },
   {
     title: "Zinc Theme",
@@ -51,7 +60,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#A9C33D",
     tags:['backend', 'frontend', 'fullstack', 'googlecloud', 'app', 'pro', 'ecomm'],
-    subtags: ['theme', 'app', 'custom-cart', 'shopify-api']
+    subtags: ['theme', 'app', 'custom-cart', 'shopify-api'],
+    featured: false,
+    year: "2022-2023",
+    id: "zinc-theme",
   },
   {
     title: "Copper Cow Coffee",
@@ -64,7 +76,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#FEBFC6",
     tags:['frontend', 'shopify', 'pro', 'ecomm'],
-    subtags: ['theme', 'app', 'custom-cart', 'shopify-api', 'shopify-plus', 'migration', 'recharge']
+    subtags: ['theme', 'app', 'custom-cart', 'shopify-api', 'shopify-plus', 'migration', 'recharge'],
+    featured: false,
+    year: "2021",
+    id: "copper-cow-coffee",
   },
   {
     title: "Inside Tracker",
@@ -77,7 +92,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#4F9BBE",
     tags:['shopify', 'frontend', 'pro'],
-    subtags: ['theme', 'app', 'shopify-plus', 'migration']
+    subtags: ['theme', 'app', 'shopify-plus', 'migration'],
+    featured: false,
+    year: "2021",
+    id: "inside-tracker",
   },
   {
     title: "Sprinly",
@@ -90,7 +108,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['shopify', 'frontend', 'pro'],
-    subtags: ['recharge', 'custom-cart']
+    subtags: ['recharge', 'custom-cart'],
+    featured: false,
+    year: "2021",
+    id: "sprinly",
   },
   {
     title: "Furry Freshness",
@@ -103,7 +124,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['shopify', 'frontend', 'pro', 'ecomm'],
-    subtags: ['theme']
+    subtags: ['theme'],
+    featured: false,
+    year: "2021",
+    id: "furry-freshness",
   },
   {
     title: "Mint Julep",
@@ -116,7 +140,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['shopify', 'frontend', 'pro'],
-    subtags: ['app', 'shopify-plus', 'migration']
+    subtags: ['app', 'shopify-plus', 'migration'],
+    featured: false,
+    year: "2020",
+    id: "mint-julep",
   },
   {
     title: "Govalo",
@@ -153,7 +180,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['shopify', 'frontend', 'backend', 'fullstack', 'app', 'pro'],
-    subtags: ['app', 'shopify-plus', 'migration']
+    subtags: ['app', 'shopify-plus', 'migration'],
+    featured: false,
+    year: "2022",
+    id: "govalo",
   },
   {
     title: "Kristen Burgess Portfolio",
@@ -166,7 +196,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['personal', 'frontend', 'fullstack', 'design'],
-    subtags: ['app', 'shopify-plus', 'migration']
+    subtags: ['app', 'shopify-plus', 'migration'],
+    featured: false,
+    year: "2025",
+    id: "kristen-burgess-portfolio",
   },
   {
     title: "Omnique Chat",
@@ -179,7 +212,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['pro', 'frontend', 'backend', 'fullstack', 'app' ],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2018",
+    id: "omnique-chat",
   },
   {
     title: "Omnique Marketing",
@@ -192,7 +228,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['pro', 'frontend', 'backend', 'fullstack', 'app' ],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2019",
+    id: "omnique-marketing",
   },
   {
     title: "Dealer 360",
@@ -205,7 +244,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['pro', 'frontend', 'backend', 'fullstack', 'app' ],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2018",
+    id: "dealer-360",
   },
   {
     title: "AGEX Market",
@@ -218,7 +260,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['pro', 'frontend', 'backend', 'fullstack', 'app' ],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2017",
+    id: "agex",
   },
   {
     title: "Harmony Arms",
@@ -231,7 +276,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['pro', 'frontend', 'backend', 'ecomm', 'design'],
-    subtags: ['headless', 'app']
+    subtags: ['headless', 'app'],
+    featured: false,
+    year: "2020",
+    id: "harmony-arms",
   },
   {
     title: "FracTrends",
@@ -244,7 +292,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['pro', 'frontend', 'backend', 'fullstack', 'app' ],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2018-2019",
+    id: "fractrends",
   },
   {
     title: "Calf Tracker",
@@ -257,7 +308,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['personal', 'frontend', 'backend', 'fullstack', 'app' ],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2017",
+    id: "calf-tracker",
   },
   {
     title: "Can Chaser",
@@ -270,7 +324,10 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['personal', 'frontend', 'backend', 'fullstack', 'app' ],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2016",
+    id: "can-chaser",
   },
   {
     title: "Halloween Hangman Game",
@@ -283,6 +340,9 @@ export const projects: Project[] = [
     screenshots: [],
     backgroundColor: "#ffd24c",
     tags:['personal', 'frontend', 'backend', 'fullstack', 'app' ],
-    subtags: []
+    subtags: [],
+    featured: false,
+    year: "2016",
+    id: "halloween-hangman",
   },
 ];
