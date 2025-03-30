@@ -53,10 +53,11 @@ interface ProjectGridProps {
 
 const tilePattern = [
   { md: 8 }, { md: 4 },
+  // { md: 6 }, { md: 6 },
   { md: 4 }, { md: 4 }, { md: 4 },
   { md: 6 }, { md: 6 },
   { md: 3 }, { md: 3 }, { md: 3 }, { md: 3 },
-  { md: 8 }, { md: 4 },
+  { md: 4 }, { md: 4 }, { md: 4 },
   { md: 4 }, { md: 4 }, { md: 4 }
 ];
 
