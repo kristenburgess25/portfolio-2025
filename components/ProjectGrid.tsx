@@ -20,7 +20,7 @@ import MenuItem from '@mui/material/MenuItem';
 const TileContainer = styled(Box)({
   display: 'flex',
   flexDirection: 'column',
-  gap: '2rem',
+  gap: '3rem',
   padding: '1rem',
 });
 

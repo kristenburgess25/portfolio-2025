@@ -77,7 +77,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             )}
             {project.githubLink && (
               <Button
-                variant="outlined"
+                variant="contained"
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener"
@@ -93,9 +93,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         {/* Screenshots */}
         {project.screenshots.length > 0 && (
           <Box sx={{ mt: 4 }}>
-            <Typography variant="subtitle1" sx={{ fontWeight: 'bold', mb: 2 }}>
-              Screenshots:
-            </Typography>
             <ImageList cols={2} gap={12}>
               {project.screenshots.map((src, index) => (
                 <ImageListItem key={index}>

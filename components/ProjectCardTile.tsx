@@ -180,27 +180,38 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
         },
       }}
     >
-      {/* Background Image */}
-      <Image
-        src={project.image}
-        alt={project.title}
-        fill
-        style={{
-          objectFit: 'contain',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          zIndex: 1,
-        }}
-        sizes="(max-width: 768px) 100vw, 33vw"
-      />
+      {/* Image */}
+      <Box sx={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          style={{
+            objectFit: 'contain',
+            filter: 'brightness(0.95) saturate(0.9) contrast(0.95)', // subtle image tone-down
+          }}
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
 
-      {/* Overlay */}
+        {/* Subtle overlay tint */}
+        <Box
+          sx={{
+            position: 'absolute',
+            inset: 0,
+            zIndex: 2,
+            background: 'linear-gradient(180deg, rgba(49, 34, 68, 0.06), rgba(49, 34, 68, 0.12))',
+            mixBlendMode: 'multiply',
+            pointerEvents: 'none', // so clicks go through to parent
+          }}
+        />
+      </Box>
+
+      {/* Hover Overlay */}
       <Box
         sx={{
           position: 'absolute',
           inset: 0,
-          zIndex: 2,
+          zIndex: 3,
           padding: '1rem',
           color: 'white',
           backgroundColor: 'rgba(0,0,0,0.4)',
@@ -244,7 +255,7 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
           </Box>
         </Box>
 
-        {/* Description + Stack */}
+        {/* Description + Tech Stack */}
         <Box>
           <Typography variant="body2" sx={{ mb: 1 }}>
             {project.description}
