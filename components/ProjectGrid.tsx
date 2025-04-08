@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import ProjectCardTile from './ProjectCardTile';
 import ProjectModal from './ProjectModal';
+import ProjectCardTileMobile from './ProjectCardTileMobile';
 import { projects } from "../data/projects"
 import type { Project } from '@/types/project';
 import type { SxProps, Theme } from '@mui/material/styles';
@@ -43,11 +44,11 @@ const filterLabels = Object.keys(filterMap);
 
 const getFilterButtonStyles = (isSelected: boolean): SxProps<Theme> => ({
   textTransform: 'none',
-  width: '10rem',
+  width: '7rem',
   fontWeight: 500,
   borderRadius: '4px',
   padding: '0.4rem 1.2rem',
-  margin: '0 0.75rem',
+  margin: '0 0.5rem',
   fontSize: '1.2rem',
   fontFamily: "'Zain', serif",
   transition: 'all 0.25s ease-in-out',
@@ -166,11 +167,18 @@ const ProjectGrid: React.FC = () => {
           const gridProps = tilePattern[index % tilePattern.length];
           return (
             <Grid item key={project.id} xs={12} sm={6} {...gridProps}>
+            {isMobile ? (
+              <ProjectCardTileMobile
+                project={project}
+                onClick={() => setSelectedProject(project)}
+              />
+            ) : (
               <ProjectCardTile
                 project={project}
                 onClick={() => setSelectedProject(project)}
               />
-            </Grid>
+            )}
+          </Grid>
           );
         })}
       </Grid>
