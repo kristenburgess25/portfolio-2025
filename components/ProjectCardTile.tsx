@@ -25,7 +25,6 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
         background: 'linear-gradient(135deg, rgba(191, 162, 219, 0.3), rgba(49, 34, 68, 0.3))',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
         cursor: 'pointer',
         '&:hover': {
@@ -37,12 +36,17 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
         display: 'flex',
         flexDirection: 'column',
         gap: '1rem',
-        padding: '1rem',
       }}
       
     >
       {/* Title + Links */}
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <Box 
+        sx={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center',
+            padding: '1rem 1rem 0 1rem', 
+        }}>
         <Typography variant="h6" sx={{ fontWeight: 600, fontSize: '1rem', color: 'white' }}>
           {project.title}
         </Typography>

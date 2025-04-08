@@ -13,16 +13,16 @@ const companies = [
     link: "https://www.elementumtech.io",
     shopifyPlusPartner: false,
     keyAchievements:['⚡ Built an AI-powered content generation tool that allows users to import social media content and create engaging blog posts, enhancing content marketing strategies.', '⚡ Developed a no-code e-commerce experience builder that enables users to design and host immersive, interactive shopping environments with ease.', '⚡ Designed & built a fully customizable Shopify 2.0 theme, providing merchants with maximum flexibility and performance.'],
-    backgroundColor: "#f26e3f"
+    backgroundColor: ""
   },
   {
     clientName: "Govalo",
-    logo: "../logos/Govalo_Dark.png",
+    logo: "../logos/govalo-logo-mono-light.png",
     description: "Govalo is a fintech/e-commerce startup transforming the digital gifting experience, helping Shopify merchants customize, streamline, and scale their gift offerings. Recruited internally from The Taproom, I was one of the first developers to help build this platform and take it to market.",
     link: "https://www.govalo.com",
     shopifyPlusPartner: true,
     keyAchievements:['⚡ Engineered a Shopify-integrated React app that processed $1M+ in gift card transactions within 4 months', '⚡ Developed custom bulk gift card issuance functionality, enabling merchants to generate hundreds of gift cards in one click via CSV upload.', '⚡ Built gift card customization tools, allowing users to create multiple unique and branded card designs.', '⚡ Implemented end-to-end testing across Govalo’s codebases, improving stability and reducing regression issues.'],
-    backgroundColor: "#ffd24c"
+    backgroundColor: ""
   },
   {
     clientName: "The Taproom Agency",
@@ -31,7 +31,7 @@ const companies = [
     link: "https://www.thetaproom.com/",
     shopifyPlusPartner: true,
     keyAchievements:['⚡ Developed a custom quiz app for Copper Cow Coffee, allowing customers to receive personalized product recommendations, increasing engagement and conversions.', '⚡ Created an interactive product comparison app, greatly improving the customer shopping experience for Inside Tracker’s complex genetic data product offerings.', '⚡ Created a custom gifting portal for Sprinly, integrating Recharge to enable seamless gifting of recurring meal service subscriptions.'],
-    backgroundColor: "#4e9bbf"
+    backgroundColor: ""
   },
   {
     clientName: "DevIQ",
@@ -40,16 +40,16 @@ const companies = [
     link: "https://www.deviq.io",
     shopifyPlusPartner: false,
     keyAchievements:['⚡ Helped secure $450K+ in new business as part of a three-person sales development team, driving client acquisition through technical expertise and project scoping.', '⚡ Led three greenfield projects from the sales phase through production release, working closely with stakeholders to design and implement scalable solutions.', '⚡ Designed and built a real-time live chat application for an automotive software company, improving communication and workflow efficiency for service centers.', '⚡ Developed a high-performance data visualization tool that enabled clients to manage and analyze millions of rows of data, optimizing decision-making processes for large-scale operations.'],
-    backgroundColor: "#8282E7"
+    backgroundColor: ""
   },
   {
     clientName: "AGEX, Inc.",
-    logo: "../logos/agex-logo.png",
+    logo: "../logos/agex-logo-2.png",
     description: "AGEX is an ag-tech startup building a fully licensed and bonded online livestock auction and marketplace—think eBay for cattle. The company had a unique technical scope, not only developing software solutions for livestock trading but also innovating with custom cattle scales and a QR-based electronic identification (EID) system for tracking livestock.",
     link: "https://www.agex.io",
     shopifyPlusPartner: false,
     keyAchievements:['⚡ Led frontend development on the marketplace and herd management apps, delivering core functionality for buyers, sellers, and ranchers', '⚡ Implemented end-to-end testing (E2E) across all platforms, improving stability and reliability.', '⚡ Designed all wireframes and prototypes for AGEX’s software suite, ensuring intuitive UX and UI.', '⚡ Played a major role in product development for the herd management app, working closely with stakeholders to define features and workflows'],
-    backgroundColor: "#F5B4D9"
+    backgroundColor: ""
   },
   {
     clientName: "GrainBridge, LLC",
@@ -58,7 +58,7 @@ const companies = [
     link: "https://app.grainbridge.com/",
     shopifyPlusPartner: false,
     keyAchievements:['⚡ Expanded business into three new states, generating $250K+ in new revenue through strategic partnerships and outreach.', '⚡ Featured speaker at national industry events and forums, positioning GrainBridge as a thought leader in agricultural risk management.', '⚡ Implemented an SEO strategy that increased inbound customer inquiries by 200%.', '⚡ Wrote industry articles featured in national publications, enhancing brand visibility and credibility.', '⚡ Produced promotional and educational video content, helping clients understand and adopt GrainBridge’s technology.'],
-    backgroundColor: "#A9C33D"
+    backgroundColor: ""
   },
   // Add more projects here
 ];
