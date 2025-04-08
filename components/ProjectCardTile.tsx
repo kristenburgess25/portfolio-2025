@@ -127,8 +127,8 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
       sx={{
         position: 'relative',
         width: '100%',
-        height: 350,
-        borderRadius: '12px',
+        height: 330,
+        borderRadius: '5px',
         overflow: 'hidden',
         cursor: 'pointer',
         transition: 'transform 0.3s ease',
@@ -145,6 +145,7 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
         style={{
           objectFit: 'contain',
           position: 'absolute',
+          borderRadius: "5px",
           top: 0,
           left: 0,
           zIndex: 1,

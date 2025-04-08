@@ -8,28 +8,10 @@ import { Typography } from "@mui/material";
 const ProjectsPage: React.FC = () => {
     return (
       <div id="employment-history">
-        <div id="client-projects" style={{ background: "linear-gradient(to bottom, #BFA2DB, #312244)" }}>
-        <Typography 
-          variant="h2" 
-          sx={{ 
-            fontFamily: "'Zain', serif", 
-            margin: "auto", 
-            textAlign: "center", 
-            paddingTop: '3rem', 
-            color: "white",
-            "@media (max-width: 768px)": {
-                fontSize: "3.5rem", // Adjust for mobile
-              }
-            }}
-          >
-            Work Experience
-        </Typography>
-        <CompanyGrid />
-        </div>
         {/* <div id="personal-projects">
           <PersonalProjects />
         </div> */}
-        <div id="client-projects" style={{ backgroundColor: "#312244" }}>
+        <div id="client-projects" style={{ background: "linear-gradient(to bottom, #BFA2DB, #312244)" }}>
         <Typography 
           variant="h2" 
           sx={{ 
@@ -42,10 +24,29 @@ const ProjectsPage: React.FC = () => {
               } 
           }}
         >
-           Projects
+           Work Experience
         </Typography>
         <br />
-        <ProjectGrid />
+        <CompanyGrid />
+        </div>
+        
+        <div id="client-projects" style={{ backgroundColor: "#312244" }}>
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              fontFamily: "'Zain', serif", 
+              margin: "auto", 
+              textAlign: "center", 
+              paddingTop: '3rem', 
+              color: "white",
+              "@media (max-width: 768px)": {
+                  fontSize: "3.5rem", // Adjust for mobile
+                }
+              }}
+            >
+              Projects
+          </Typography>
+          <ProjectGrid />
         </div>
 
       </div>
