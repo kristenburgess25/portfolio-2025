@@ -70,7 +70,7 @@ const CompanyGrid: React.FC = () => {
       spacing={4} 
       justifyContent="center"
       alignItems="center" 
-      sx={{ padding: 5 }}
+      sx={{ padding: 2 }}
     >
       {companies.map((company, index) => (
         <Grid item xs={12} sm={12} md={6} lg={4} key={index} display="flex" justifyContent="center">

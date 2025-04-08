@@ -100,6 +100,7 @@ const ProjectGrid: React.FC = () => {
         setSelectedFilter(value === '' ? null : value);
       }}
       displayEmpty
+      size="small"
       variant="outlined"
       MenuProps={{
         PaperProps: {
