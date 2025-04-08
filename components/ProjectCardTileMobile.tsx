@@ -26,7 +26,7 @@ const ProjectCardTileMobile: React.FC<ProjectCardTileMobileProps> = ({ project, 
     >
       {/* Title + Links Row */}
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Typography variant="h6" sx={{ fontWeight: 600, fontSize: '1rem', color: '#201331' }}>
+        <Typography variant="h5" sx={{ fontWeight: 600, fontSize: '1rem', color: '#201331' }}>
           {project.title}
         </Typography>
         <Box>
@@ -35,11 +35,10 @@ const ProjectCardTileMobile: React.FC<ProjectCardTileMobileProps> = ({ project, 
               href={project.liveLink}
               target="_blank"
               rel="noopener"
-              size="small"
               sx={{ color: '#201331' }}
               onClick={(e) => e.stopPropagation()}
             >
-              <Link fontSize="small" />
+              <Link fontSize="medium" />
             </IconButton>
           )}
           {project.githubLink && (
@@ -47,11 +46,10 @@ const ProjectCardTileMobile: React.FC<ProjectCardTileMobileProps> = ({ project, 
               href={project.githubLink}
               target="_blank"
               rel="noopener"
-              size="small"
-              sx={{ color: '#201331' }}
+              sx={{ color: '#201331'}}
               onClick={(e) => e.stopPropagation()}
             >
-              <GitHub fontSize="small" />
+              <GitHub fontSize="medium" />
             </IconButton>
           )}
         </Box>

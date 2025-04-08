@@ -66,10 +66,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             {project.liveLink && (
               <Button
                 variant="contained"
-                color="primary"
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener"
+                sx={{ background: project.backgroundColor }}
                 startIcon={<Link />}
               >
                 Live Site
@@ -81,6 +81,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener"
+                sx={{ background: project.backgroundColor }}
                 startIcon={<GitHub />}
               >
                 GitHub Repo
