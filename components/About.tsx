@@ -60,8 +60,8 @@ const IconContent = styled(Grid)(() => ({
   textAlign: "center",
   margin: "1rem",
   padding: "2rem",
-  background: "rgba(255, 255, 255, 0.9)", // Subtle off-white for contrast
-  borderRadius: "12px",
+  background: "#f1e5fd",
+  borderRadius: "4px",
   boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
 }));
 

@@ -1,5 +1,17 @@
 export interface Project {
-    clientName: string;
-    logo: string;
-    description: string;
-  }
+  title: string;
+  description: string;            
+  moreDetails: string;
+  logo: string;            
+  image: string;                 
+  screenshots: string[];         
+  liveLink: string;               
+  githubLink: string;            
+  techStack: string[];            
+  tags: string[];                 
+  subtags: string[];              
+  backgroundColor?: string;       
+  featured?: boolean;             
+  year?: string;                  
+  id: string;                     
+}
