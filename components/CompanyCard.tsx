@@ -135,8 +135,8 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
                   fontSize: "1rem",
                   textTransform: 'none',
                   padding: '0.3rem 0.8rem',
-                  borderRadius: '9999px',
-                  border: '1px solid #BFA2DB',
+                  borderRadius: '4px',
+                  // border: '1px solid #BFA2DB',
                   transition: 'all 0.3s ease',
                   '&:hover': {
                     background: 'linear-gradient(135deg, #BFA2DB, #312244)',

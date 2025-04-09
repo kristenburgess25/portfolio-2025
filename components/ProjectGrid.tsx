@@ -75,7 +75,7 @@ const tilePattern = [
 ];
 
 const ProjectGrid: React.FC = () => {
-  const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
+  const [selectedFilter, setSelectedFilter] = useState<string | null>("Featured");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const theme = useTheme();
@@ -163,7 +163,7 @@ const ProjectGrid: React.FC = () => {
 </FilterContainer>
 
 
-      {/* Grid of Projects */}
+      {/* Project Grid */}
       <Grid container spacing={2}>
         {filteredProjects.map((project, index) => {
           const gridProps = tilePattern[index % tilePattern.length];

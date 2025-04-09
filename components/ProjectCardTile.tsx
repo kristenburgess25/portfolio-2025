@@ -151,6 +151,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
+import Button from '@mui/material/Button';
 import { GitHub, Link } from '@mui/icons-material';
 import type { Project } from '@/types/project';
 
@@ -171,7 +172,7 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
         position: 'relative',
         width: '100%',
         height: 350,
-        borderRadius: '12px',
+        borderRadius: '4px',
         overflow: 'hidden',
         cursor: 'pointer',
         transition: 'transform 0.3s ease',
@@ -181,13 +182,14 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
       }}
     >
       {/* Image */}
-      <Box sx={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+      <Box sx={{ position: 'absolute', inset: 0, zIndex: 1, borderRadius: '4px' }}>
         <Image
           src={project.image}
           alt={project.title}
           fill
           style={{
             objectFit: 'contain',
+            borderRadius: '4px',
             filter: 'brightness(0.95) saturate(0.9) contrast(0.95)', // subtle image tone-down
           }}
           sizes="(max-width: 768px) 100vw, 33vw"
@@ -235,10 +237,10 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener"
-                size="small"
+                size="medium"
                 sx={{ color: 'white' }}
               >
-                <Link fontSize="small" />
+                <Link fontSize="medium" />
               </IconButton>
             )}
             {project.githubLink && (
@@ -246,13 +248,39 @@ const ProjectCardTile: React.FC<ProjectCardTileProps> = ({ project, onClick }) =
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener"
-                size="small"
+                size="medium"
                 sx={{ color: 'white' }}
               >
-                <GitHub fontSize="small" />
+                <GitHub fontSize="medium" />
               </IconButton>
             )}
           </Box>
+        </Box>
+
+        <Box sx={{ textAlign: 'center', margin: 'auto' }}>
+            {/* <Button variant="outlined" sx={{ color: '#bda1da', borderColor: "#bda1da" }}> 
+                More
+            </Button>  */}
+						<Button
+                sx={{
+                  color: '#BFA2DB',
+                  fontFamily: "'Zain', serif",
+                  fontSize: "1rem",
+                  textTransform: 'none',
+                  padding: '0.3rem 0.8rem',
+                  borderRadius: '4px',
+                  border: '1px solid #BFA2DB',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    background: 'linear-gradient(135deg, #BFA2DB, #312244)',
+                    color: 'white',
+                    borderColor: '#BFA2DB',
+                  }
+                }}
+                size="small"
+              >
+                More ⚡
+              </Button>
         </Box>
 
         {/* Description + Tech Stack */}
