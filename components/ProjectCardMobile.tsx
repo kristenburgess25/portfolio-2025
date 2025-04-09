@@ -13,19 +13,10 @@ import {
 } from "@mui/material";
 import { GitHub, Link, ExpandMore as ExpandMoreIcon, Close as CloseIcon } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
+import type { Project } from "@/types/project";
 
 interface ProjectCardProps {
-  project: {
-    title: string;
-    description: string;
-    image: string;
-    liveLink?: string;
-    githubLink?: string;
-    techStack: string[];
-    moreDetails: string;
-    screenshots: string[];
-    backgroundColor: string;
-  };
+project: Project;
 }
 
 const ExpandMore = styled(IconButton, {
