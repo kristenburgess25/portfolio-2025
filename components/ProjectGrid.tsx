@@ -35,10 +35,11 @@ const FilterContainer = styled(Box)({
 // Maps label shown in the UI to actual tag string in project data
 const filterMap: Record<string, string> = {
   "Featured": "featured",
-  "Shopify": "shopify",
   "Front End": "frontend",
-  "Back End": "backend",
+  // "Back End": "backend",
   "Full Stack": "fullstack",
+  "Shopify": "shopify",
+  "Github": "github",
 };
 const filterLabels = Object.keys(filterMap);
 
@@ -67,10 +68,10 @@ const getFilterButtonStyles = (isSelected: boolean): SxProps<Theme> => ({
 const tilePattern = [
   { md: 7 }, { md: 5 },
   { md: 4 }, { md: 4 }, { md: 4 },
-  { md: 6 }, { md: 6 },
-  { md: 3 }, { md: 3 }, { md: 3 }, { md: 3 },
   { md: 4 }, { md: 4 }, { md: 4 },
-  { md: 4 }, { md: 4 }, { md: 4 }
+  { md: 4 }, { md: 4 }, { md: 4 },
+  { md: 4 }, { md: 4 }, { md: 4 },
+  { md: 4 }, { md: 4 }, { md: 4 },
 ];
 
 const ProjectGrid: React.FC = () => {
