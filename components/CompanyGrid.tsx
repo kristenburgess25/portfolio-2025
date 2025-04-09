@@ -60,7 +60,6 @@ const companies = [
     keyAchievements:['⚡ Expanded business into three new states, generating $250K+ in new revenue through strategic partnerships and outreach.', '⚡ Featured speaker at national industry events and forums, positioning GrainBridge as a thought leader in agricultural risk management.', '⚡ Implemented an SEO strategy that increased inbound customer inquiries by 200%.', '⚡ Wrote industry articles featured in national publications, enhancing brand visibility and credibility.', '⚡ Produced promotional and educational video content, helping clients understand and adopt GrainBridge’s technology.'],
     backgroundColor: ""
   },
-  // Add more projects here
 ];
 
 const CompanyGrid: React.FC = () => {
