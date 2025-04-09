@@ -33,16 +33,20 @@ const FlipContainer = styled("div")(() => ({
   width: "100%",
   height: "430px",
   position: "relative",
-  borderRadius: '10px',
+  borderRadius: '4px',
   overflow: 'hidden',
   background: 'linear-gradient(135deg, rgba(191, 162, 219, 0.25), rgba(49, 34, 68, 0.25))',
   backdropFilter: 'blur(10px)',
   WebkitBackdropFilter: 'blur(10px)',
   border: '1px solid rgba(255, 255, 255, 0.1)',
   boxShadow: '0 8px 20px rgba(0, 0, 0, 0.05)',
+  transition: 'transform 0.3s ease-in-out',
+
+  // Apply wiggle on hover (desktop only)
+  "@media (min-width: 768px)": {
+    cursor: "pointer",
+  },
 }));
-
-
 
 const FlipCardInner = styled("div")(({ flipped }: { flipped: boolean }) => ({
   width: "100%",
@@ -51,42 +55,40 @@ const FlipCardInner = styled("div")(({ flipped }: { flipped: boolean }) => ({
   transition: "transform 0.6s ease-in-out",
   transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
 
-  // Make back side scrollable if content overflows
-  ".flip-back": {
-    overflowY: "auto",
-    scrollbarWidth: "thin", // For Firefox
-    scrollbarColor: "rgba(0,0,0,0.2) transparent",
-
-    "&::-webkit-scrollbar": {
-      width: "6px", 
-    },
-    "&::-webkit-scrollbar-thumb": {
-      background: "rgba(0,0,0,0.3)", 
-      borderRadius: "4px",
+  "@media (min-width: 768px)": {
+    cursor: "pointer",
+    "&:hover": {
+      transform: flipped ? "rotateY(180deg)" : "rotateY(7deg)",
     },
   },
 
-  // Apply hover effect only on desktop
-  "@media (min-width: 768px)": {
-    cursor: "pointer",
-    transition: "transform 0.3s ease-in-out",
-    "&:hover": {
-      transform: flipped ? "rotateY(180deg)" : "rotateY(10deg)",
+  ".flip-back": {
+    overflowY: "auto",
+    scrollbarWidth: "thin",
+    scrollbarColor: "rgba(0,0,0,0.2) transparent",
+    "&::-webkit-scrollbar": {
+      width: "6px",
     },
-  }
+    "&::-webkit-scrollbar-thumb": {
+      background: "rgba(0,0,0,0.3)",
+      borderRadius: "4px",
+    },
+  },
 }));
+
 
 const CardSide = styled(Card)(() => ({
   position: "absolute",
   width: "100%",
   height: "430px",
   minHeight: "430px",
-  borderRadius: '10px',
+  borderRadius: '4px',
   backfaceVisibility: "hidden",
   display: "flex",
   flexDirection: "column",
   background: 'transparent',
   boxShadow: 'none',
+  borderTop: `0.5rem solid #312244`,
 }));
 
 
@@ -127,26 +129,25 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
           {project.link && (
             <CardActions sx={{ margin: "auto 1rem 1rem auto"}}>
               <Button
-  sx={{
-    color: '#BFA2DB',
-    fontFamily: "'Zain', serif",
-    fontSize: "1rem",
-    textTransform: 'none',
-    padding: '0.3rem 0.8rem',
-    borderRadius: '9999px',
-    border: '1px solid #BFA2DB',
-    transition: 'all 0.3s ease',
-    '&:hover': {
-      background: 'linear-gradient(135deg, #BFA2DB, #312244)',
-      color: 'white',
-      borderColor: '#BFA2DB',
-    }
-  }}
-  size="small"
->
-  More ⚡
-</Button>
-
+                sx={{
+                  color: '#BFA2DB',
+                  fontFamily: "'Zain', serif",
+                  fontSize: "1rem",
+                  textTransform: 'none',
+                  padding: '0.3rem 0.8rem',
+                  borderRadius: '9999px',
+                  border: '1px solid #BFA2DB',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    background: 'linear-gradient(135deg, #BFA2DB, #312244)',
+                    color: 'white',
+                    borderColor: '#BFA2DB',
+                  }
+                }}
+                size="small"
+              >
+                More ⚡
+              </Button>
             </CardActions>
           )}
         </CardSide>
@@ -156,43 +157,41 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ project }) => {
           className="flip-back" // Apply scrollable class
           sx={{ 
             transform: "rotateY(180deg)", 
-            background: `${project.backgroundColor}`, 
-            borderTop: `1rem solid ${project.backgroundColor}`,
+            // background: `${project.backgroundColor}`, 
+            borderTop: `1rem solid #312244`,
           }} 
           onClick={handleFlip}
         >
-<CardContent
-  sx={{
-    backgroundColor: 'rgba(255, 255, 255, 0.15)',
-    backdropFilter: 'blur(10px)',
-    WebkitBackdropFilter: 'blur(10px)',
-    borderRadius: '10px',
-    padding: '1.2rem',
-    height: '100%',
-    overflowY: 'auto',
-    color: 'white',
-  }}
->
-  <Typography
-    gutterBottom
-    variant="h5"
-    fontSize="1.15rem"
-    sx={{ color: 'white' }}
-  >
-    Impact at {project.clientName}
-  </Typography>
-  <List dense>
-    {project.keyAchievements.map((item, index) => (
-      <ListItem key={index}>
-        <Typography variant="body2" sx={{ color: 'white' }}>
-          {item}
-        </Typography>
-      </ListItem>
-    ))}
-  </List>
-</CardContent>
-
-
+          <CardContent
+            sx={{
+              backgroundColor: 'rgba(255, 255, 255, 0.15)',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
+              borderRadius: '4px',
+              padding: '1.2rem',
+              height: '100%',
+              overflowY: 'auto',
+              color: 'white',
+            }}
+          >
+            <Typography
+              gutterBottom
+              variant="h5"
+              fontSize="1.15rem"
+              sx={{ color: 'white' }}
+            >
+              Impact at {project.clientName}
+            </Typography>
+            <List dense>
+              {project.keyAchievements.map((item, index) => (
+                <ListItem key={index}>
+                  <Typography variant="body2" sx={{ color: 'white' }}>
+                    {item}
+                  </Typography>
+                </ListItem>
+              ))}
+            </List>
+          </CardContent>
         </CardSide>
       </FlipCardInner>
     </FlipContainer>

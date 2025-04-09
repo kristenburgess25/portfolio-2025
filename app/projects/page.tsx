@@ -19,6 +19,7 @@ const ProjectsPage: React.FC = () => {
             margin: "auto", 
             textAlign: "center", 
             paddingTop: '3rem',
+            color: "#312244",
             "@media (max-width: 768px)": {
                 fontSize: "3.5rem", // Adjust for mobile
               } 
@@ -38,7 +39,7 @@ const ProjectsPage: React.FC = () => {
               margin: "auto", 
               textAlign: "center", 
               paddingTop: '3rem', 
-              color: "white",
+              color: "#BFA2DB",
               "@media (max-width: 768px)": {
                   fontSize: "3.5rem", // Adjust for mobile
                 }
